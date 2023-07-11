@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+</head>
+<body>
+    <form onsubmit="alertFunc(), phonenumber()" id="form" method="POST">
+        <div class="ic">
+            <label for="name">Nome:</label>
+            <input type="text" name="name" id="name" placeholder="Ex: João" required >
+        </div>
+
+        <br>
+
+        <div class="ic">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="test@test.com" required>
+        </div>
+
+        <br>
+
+        <div class="ic">
+            <label for="phone">Telefone:</label>
+            <input type="tel" name="phone" id="phone" placeholder="(XX) XXXX-XXXX" required>
+        </div>
+
+        <br>
+        
+        <div class="ic">
+            <label for="msg">Mensagem:</label>
+            <input type="text" name="msg" id="msg" required>
+        </div>
+
+        <br>
+
+        <button type="button" id="btnSubmit">Enviar</button>
+    </form>
+</body>
+</html>
