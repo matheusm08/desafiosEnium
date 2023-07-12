@@ -11,10 +11,10 @@
     <script src="script.js"></script>
 </head>
 <body>
-    <form onsubmit="alertFunc(), phonenumber()" id="form" method="POST">
+    <form onsubmit="alertFunc()" id="form" method="POST">
         <div class="ic">
             <label for="name">Nome:</label>
-            <input type="text" name="name" id="name" placeholder="Ex: João" required >
+            <input type="text" name="name" id="name" placeholder="Ex: João" required>
         </div>
 
         <br>
@@ -28,19 +28,19 @@
 
         <div class="ic">
             <label for="phone">Telefone:</label>
-            <input type="tel" name="phone" id="phone" placeholder="(XX) XXXX-XXXX" required>
+            <input type="input" onkeydown="phoneMaskBrazil()" maxlength="15" placeholder="(XX) XXXX-XXXX" required>
         </div>
 
         <br>
         
         <div class="ic">
             <label for="msg">Mensagem:</label>
-            <input type="text" name="msg" id="msg" required>
+            <textarea name="msg" id="msg"></textarea>
         </div>
 
         <br>
 
-        <button type="button" id="btnSubmit">Enviar</button>
+        <button type="submit" id="btnSubmit">Enviar</button>
     </form>
 </body>
 </html>

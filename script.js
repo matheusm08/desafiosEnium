@@ -1,13 +1,24 @@
+document.getElementById("DOMContentLoaded", function() {
+  document.getElementById("form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const phone = document.getElementById("phone").value;
+  })
+});
+
+function phoneMaskBrazil() {
+  var key = window.event.key;
+  var element = window.event.target;
+  var isAllowed = /\d|Backspace|Tab/;
+  if (!isAllowed.test(key)) window.event.preventDefault();
+
+  var inputValue = element.value; 
+  inputValue = inputValue.replace(/\D/g, "");
+  inputValue = inputValue.replace(/(^\d{2})(\d)/, "($1) $2");
+  inputValue = inputValue.replace(/(\d{4,5})(\d{4}$)/, "$1-$2");
+
+  element.value = inputValue;
+};
+
 function alertFunc() {
-    phonenumber()
-    alert('Formulario enviado');
-}
-function phonenumber(phone) {
-  var phoneno = /(\([0-9]{2}\)\s?[0-9]{4,5}-?[0-9]{3,4})|([0-9]{10,11})|([0-9]{2}\s?[0-9]{8,9})/gm;
-  if (phone.value.match(phoneno)){
-      return true, alertFunc();
-    }else {
-        alert("Número de telefone inválido");
-        return false;
-        }
-}
+  alert('Formulario enviado');
+};
